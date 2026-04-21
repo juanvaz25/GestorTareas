@@ -68,7 +68,10 @@ GestorTareas/       # ASP.NET Core Web API
 │   ├── vite.config.ts
 │   └── tsconfig.json
 │
-├── database.sql                    # Script de BD (CREATE + INSERT)
+├── Documentacion BD/               # Scripts y diagrama
+|   ├── QueryDatos.sql              # Script para agregar datos
+|   ├── QueryTablas.sql             # Script para crear BD y Tablas
+|   └── Diagrama BD.pdf             # Diagrama Realacional
 └── README.md
 ```
 
