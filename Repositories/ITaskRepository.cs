@@ -1,6 +1,6 @@
 ﻿using GestorTareas.Models;
 
-namespace GestorTareas.API.Repositories
+namespace GestorTareas.Repositories
 {
     public interface ITaskRepository
     {

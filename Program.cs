@@ -1,4 +1,7 @@
-﻿using GestorTareas.Data;
+﻿using GestorTareas.Repositories;
+using GestorTareas.Data;
+using GestorTareas.Middleware;
+using GestorTareas.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System;
@@ -26,12 +29,21 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
     {
-        policy.WithOrigins(
-                builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()
-                ?? new[] { "http://localhost:5173" }
-              )
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        }
+        else
+        {
+            policy.WithOrigins(
+                    builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()
+                    ?? new[] { "http://localhost:5173" }
+                  )
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        }
     });
 });
 
@@ -46,7 +58,11 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API REST para gestión de tareas — STJ La Pampa",
         Contact = new OpenApiContact { Name = "Secretaría de Sistemas y Organización" }
     });
-
+    c.AddServer(new OpenApiServer
+    {
+        Url = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5135",
+        Description = "URL base para la API"
+    });
     // Incluir comentarios XML en Swagger
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);

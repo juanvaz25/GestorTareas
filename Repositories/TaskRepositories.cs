@@ -2,7 +2,7 @@
 using GestorTareas.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GestorTareas.API.Repositories;
+namespace GestorTareas.Repositories;
 
 public class TaskRepository : ITaskRepository
 {
