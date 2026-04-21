@@ -1,6 +1,6 @@
 import type { CreateTaskPayload, Task, UpdateTaskPayload } from '../types';
 
-const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:5173/api';
+const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:5135/api';
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {
