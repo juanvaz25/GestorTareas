@@ -92,7 +92,7 @@ GestorTareas/       # ASP.NET Core Web API
 
 ```bash
 git clone https://github.com/juanvaz25/GestorTareas.git
-cd gestor-tareas
+cd GestorTareas
 ```
 
 ### 2. Base de datos
@@ -223,3 +223,5 @@ Durante el desarrollo se utilizó **Claude** como asistente de programación.
 - La lógica de validación de estados y existencia de usuario
 
 Toda decisión de diseño fue revisada y comprendida antes de incorporarla al código.
+
+Trabajo realizado por Juan José Vazquez
