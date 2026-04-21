@@ -1,6 +1,6 @@
 # Gestor de Tareas
 
-Aplicación web fullstack para gestión de tareas desarrollada con tres estados ()
+Aplicación web fullstack para gestión de tareas desarrollada con tres estados
 
 ---
 
@@ -11,7 +11,7 @@ Aplicación web fullstack para gestión de tareas desarrollada con tres estados 
 | Frontend | React 18 + TypeScript + Vite |
 | Backend | ASP.NET Core 9 Web API |
 | Base de datos | SQL Server / LocalDB |
-| ORM | Entity Framework Core 8 |
+| ORM | Entity Framework Core 9 |
 | Documentación API | Swagger / Swashbuckle |
 | Control de versiones | Git + GitHub |
 
