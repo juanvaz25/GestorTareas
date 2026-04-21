@@ -22,3 +22,25 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ── .NET ─────────────────────────────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.log
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# ── Node / React ──────────────────────────────────────────────────────────────
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
